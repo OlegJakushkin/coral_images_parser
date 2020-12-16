@@ -24,3 +24,5 @@ after that everything should work. You can start crawling with
 
     
 ###Good Luck
+
+made by Krasnoperov Egor, 432 group of AM-CP faculty
