@@ -22,6 +22,5 @@ also you need to have preinstalled **docker** and run next commands
 
 after that everything should work. You can start crawling with
 
-    scrapy crawl coralnet-css
     
-###***Good Luck***
+###Good Luck

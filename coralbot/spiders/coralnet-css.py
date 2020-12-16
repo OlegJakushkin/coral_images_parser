@@ -16,8 +16,8 @@ class CoralnetCSSSpider(scrapy.Spider):
                                                   response.css('table tr[data-label-id] td::text').extract()[::2],
                                                   response.css('table tr[data-label-id] td img::attr(alt)')):
             if int(popularity[:-1]) > 50 and animal_type == 'Other Invertebrates' and Duplicatecheck != 'Duplicate' :
-                yield SplashRequest(response.urljoin(coral), self.parse_images, args={'wait': 20, 'html': 1,
-                                                                                      'render_all': 1})
+                yield SplashRequest(response.urljoin(coral), callback=self.parse_images, args={'wait': 20}, dont_filter=True)
+                yield SplashRequest(response.urljoin(coral), callback=self.parse_images, args={'wait': 20}, dont_filter=True)
 
     def parse_names(self,response):
         yield {'name':response.css('div#content-container h1::text').extract_first()}
